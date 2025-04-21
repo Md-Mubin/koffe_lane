@@ -1,6 +1,8 @@
+"use client"
 import { Archivo } from 'next/font/google'
 import React from 'react'
 const bannerFont = Archivo({ preload: false })
+import 'aos/dist/aos.css';
 
 const Banner = () => {
     return (
@@ -13,9 +15,9 @@ const Banner = () => {
                         </li>
 
                         <li className='flex justify-center'>
-                            <img className='absolute top-32' src="/img/banner_img.png" alt="banner img" />
-                            <img className='absolute w-[400px] top-[-100px] left-[30%] z-40' src="/img/banner_img2.png" alt="banner img" />
-                            <img className='absolute top-32 left-[65%] z-50 animate-bounce' src="/img/badge.png" alt="badge" />
+                            <img data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" loading='lazy' className='absolute top-32' src="/img/banner_img.png" alt="banner img" />
+                            <img data-aos="fade-up" data-aos-duration="200" data-aos-delay="1300" loading='lazy' className='absolute w-[400px] top-[-100px] left-[30%] z-40' src="/img/banner_img2.png" alt="banner img" />
+                            <img loading='lazy' className='absolute top-32 left-[65%] z-50 animate-bounce' src="/img/badge.png" alt="badge" />
                         </li>
                     </ul>
                 </div>
