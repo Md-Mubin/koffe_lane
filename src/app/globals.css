@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
+body{
+  @apply p-2 lg:p-4 
+}
+
 @utility container{
   width: 100%;
-  padding-inline: 8px;
-  margin: 0 auto;
+  margin :0 auto;
 
   @variant xl{
     width: 1400px;
-    padding-inline: 0px;
   }
 }

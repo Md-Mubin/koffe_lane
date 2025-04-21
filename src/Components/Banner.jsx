@@ -1,12 +1,22 @@
+import { Archivo } from 'next/font/google'
 import React from 'react'
+const bannerFont = Archivo({ preload: false })
 
 const Banner = () => {
     return (
         <>
-            <section className='w-full h-[100dvh] bg-black'>
+            <section className='w-full h-[100dvh] bg-[#7322FF] rounded-3xl pt-[255px] overflow-hidden'>
                 <div className="container">
-                    <ul className='bg-white'>
-sdf
+                    <ul className='relative'>
+                        <li className='w-[930px] text-center m-auto'>
+                            <h1 className={`text-[210px] font-black text-[#fff] leading-[190px] relative z-10 ${bannerFont.className}`}>KOFFEE LANE</h1>
+                        </li>
+
+                        <li className='flex justify-center'>
+                            <img className='absolute top-32' src="/img/banner_img.png" alt="banner img" />
+                            <img className='absolute w-[400px] top-[-100px] left-[30%] z-40' src="/img/banner_img2.png" alt="banner img" />
+                            <img className='absolute top-32 left-[65%] z-50 animate-bounce' src="/img/badge.png" alt="badge" />
+                        </li>
                     </ul>
                 </div>
             </section>

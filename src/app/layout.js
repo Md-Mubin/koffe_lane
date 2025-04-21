@@ -1,4 +1,8 @@
+import Navbar from "@/Components/Navbar";
 import "./globals.css";
+import {Archivo, Inter} from "next/font/google"
+
+const brandFont = Inter({preload : false}) 
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={brandFont.className}>
+        <div className="sticky top-10">
+        <Navbar/>
+        </div>
         {children}
       </body>
     </html>
